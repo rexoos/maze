@@ -23,3 +23,14 @@ class Maze:
                 else:
                     row_str += str(self.grid[r][c]) + " "
             print(row_str)
+
+    def print_maze_with_player(self, player_pos):
+        """Print the maze with the player position marked as 'P'."""
+        for r in range(self.rows):
+            row_str = ""
+            for c in range(self.cols):
+                if (r, c) == player_pos:
+                    row_str += "P "  # Mark the player with 'P'
+                else:
+                    row_str += str(self.grid[r][c]) + " "
+            print(row_str)
